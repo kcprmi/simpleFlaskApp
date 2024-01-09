@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+    <img src="{{ url_for('static', filename='cat2.png') }}" alt="cat">
+    <div class = "hero text-center">
+        <h5>Your short URL: <a href="{{ url_for('main.redirect_to_original', short_url=short_url) }}" target="_blank" class="text-to-copy">http://{{current_domain}}{{ url_for('main.redirect_to_original', short_url=short_url) }}</a></h5><br>
+        <button class="btn btn-secondary" id="copy-button">Copy</button><br><br>
+        <p class="note">Long URL: {{ long_url }}</p>
+    </div>
+    
+{% endblock %}

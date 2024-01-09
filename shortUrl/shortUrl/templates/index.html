@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+<img src="{{ url_for('static', filename='cat.png') }}" alt="cat">
+<div class = "hero text-center">
+    <form method = "POST">
+        {{ form.hidden_tag () }}
+        {{ form.long_url.label }} {{ form.long_url }} {{ form.submit }}
+    </form>
+</div>
+{% endblock %}

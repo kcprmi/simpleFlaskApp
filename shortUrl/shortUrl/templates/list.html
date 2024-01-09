@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  List
+{% endblock %}
+
+{% block main %}
+<div class="hero text-center">
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Entries</th>
+          <th scope="col">Domain</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for domain in list_of_domains %}
+        <tr>
+          <td>{{ domain[1] }}</td>
+          <td>{{ domain[0] }}</td>
+        </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

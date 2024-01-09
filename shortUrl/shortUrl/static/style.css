@@ -1,0 +1,21 @@
+img{
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+.hero{
+margin-top: 25px; 
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 80px;
+display: block;
+}
+.nav{
+    margin-left: 200px;
+    margin-right: 150px;
+}
+
+.note{
+    margin-top: 50px;
+}
