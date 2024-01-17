@@ -5,6 +5,19 @@
 {% endblock %}
 
 {% block main %}
+    <script>
+        $(document).ready(function() {
+            $('#copy-button').click(function() {
+                var textToCopy = $('.text-to-copy').text();
+                var tempInput = $('<input>');
+                $('body').append(tempInput);
+                tempInput.val(textToCopy).select();
+                document.execCommand('copy');
+                tempInput.remove();
+                alert('Copied to clipboard: ' + textToCopy);
+            });
+        });
+    </script>
     <img src="{{ url_for('static', filename='cat2.png') }}" alt="cat">
     <div class = "hero text-center">
         <h5>Your short URL: <a href="{{ url_for('main.redirect_to_original', short_url=short_url) }}" target="_blank" class="text-to-copy">http://{{current_domain}}{{ url_for('main.redirect_to_original', short_url=short_url) }}</a></h5><br>
