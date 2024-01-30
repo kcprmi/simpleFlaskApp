@@ -11,9 +11,16 @@ margin-right: auto;
 margin-bottom: 80px;
 display: block;
 }
-.nav{
-    margin-left: 200px;
-    margin-right: 150px;
+.navbar {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .note{
